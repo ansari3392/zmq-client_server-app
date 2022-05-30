@@ -81,6 +81,6 @@ if __name__ == "__main__":
         logging.error("Concurrency must be an integer")
         sys.exit(1)
     server = Server()
-
-    greens = [(subprocess.call(server.run())) for green in range(concurrency)]
-    gevent.wait([greens], timeout=0.1)
+    # (subprocess.call(server.run()))
+    greens = [gevent.spawn(server.run) for green in range(concurrency)]
+    gevent.joinall(greens)
