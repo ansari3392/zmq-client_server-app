@@ -82,5 +82,5 @@ if __name__ == "__main__":
         sys.exit(1)
     server = Server()
 
-    greens = [(subprocess.Popen(server.run())) for green in range(concurrency)]
+    greens = [(subprocess.call(server.run())) for green in range(concurrency)]
     gevent.wait([greens], timeout=0.1)
