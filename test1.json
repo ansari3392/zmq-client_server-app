@@ -1,0 +1,14 @@
+
+
+{
+  "command_type": "os",
+  "command_name": "dir",
+  "parameters":
+    [
+      "F:\\django",
+      "/A",
+      "/B"
+
+
+    ]
+}

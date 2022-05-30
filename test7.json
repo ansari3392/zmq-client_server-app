@@ -1,0 +1,8 @@
+{
+  "command_type": "os",
+  "command_name": "timeout",
+  "parameters":
+    [
+          "10"
+    ]
+}
